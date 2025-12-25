@@ -21,8 +21,8 @@ export class ProgressComponent extends Component {
         } else {
             if (this.props.progress.isCancelled() || this.props.progress.isErrored()) {
                 return (<div>
-                    {this.props.progress.isErrored() ? (<h3>The task was unable to complete.</h3>) : (
-                        <h3>This task was cancelled.</h3>)}
+                    {this.props.progress.isErrored() ? (<h3>任务无法完成。</h3>) : (
+                        <h3>此任务已被取消。</h3>)}
                 </div>);
             } else {
                 if (this.props.progress.state.queuePosition < 0) {
